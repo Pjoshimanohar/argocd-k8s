@@ -1,0 +1,18 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-Deplo
+spec:
+  replicas: 2
+  matchLabels:
+    app: nginx
+  template:
+    metadata:
+      app: nginx
+    spec:
+      containers:
+      - name: ngpod
+        image: nginx
+        ports:
+        - containerPort: 80
